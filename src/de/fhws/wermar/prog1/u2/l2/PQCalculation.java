@@ -1,5 +1,8 @@
 package de.fhws.wermar.prog1.u2.l2;
 
+/**
+ * @author wermar
+ */
 public class PQCalculation {
 
     public static void main(String[] args) {

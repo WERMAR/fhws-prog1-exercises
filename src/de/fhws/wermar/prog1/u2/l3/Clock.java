@@ -1,9 +1,11 @@
 package de.fhws.wermar.prog1.u2.l3;
 
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
+/**
+ * @author wermar
+ */
 public class Clock {
 
     public static final double SECONDS_PER_DAY = 86400.0;
