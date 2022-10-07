@@ -1,14 +1,11 @@
 package de.fhws.wermar.prog1.u12.l2;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.NoSuchElementException;
 import java.util.Random;
 
 /**
  * @author wermar
  */
-@Slf4j
 public class DoubleLinkedListService {
 
 
@@ -44,7 +41,7 @@ public class DoubleLinkedListService {
         String searchedNamed = "Bauer";
         Personenknoten findNode = liste.search(searchedNamed, liste.getEntryPoint());
         if (findNode == null) {
-            log.error("Node of Personenknoten with Name: " + searchedNamed + " find");
+            System.err.println("Node of Personenknoten with Name: " + searchedNamed + " find");
             throw new NoSuchElementException("Node of Personenknoten with Name: " + searchedNamed + " find");
         } else {
             System.out.println("Founded Node: " + findNode.getAlter() + " | " + findNode.getNachname());

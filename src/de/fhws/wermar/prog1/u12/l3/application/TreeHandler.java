@@ -5,17 +5,16 @@ import de.fhws.wermar.prog1.u12.l3.domain.Node;
 import de.fhws.wermar.prog1.u12.l3.interfaces.BinarySearchTree;
 import de.fhws.wermar.prog1.u12.l3.interfaces.BinaryTree;
 import de.fhws.wermar.prog1.u12.l3.interfaces.NodeVisitor;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-@Service
-@RequiredArgsConstructor
+/**
+ * @author wermar
+ */
 public class TreeHandler implements BinarySearchTree {
 
-    private final BinaryTree tree;
+    private final BinaryTree tree = null;
 
     @Override
     public Node searchNode(Content content) {
@@ -40,11 +39,11 @@ public class TreeHandler implements BinarySearchTree {
         while (!stack.isEmpty() || node != null) {
             if (node != null) {
                 stack.push(node);
-                node = node.getLeft();
+                //node = node.getLeft();
             } else {
                 node = stack.pop();
                 visitor.visit(node);
-                node = node.getRight();
+                //node = node.getRight();
             }
         }
     }

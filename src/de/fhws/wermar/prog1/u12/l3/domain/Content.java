@@ -1,8 +1,8 @@
 package de.fhws.wermar.prog1.u12.l3.domain;
 
-import lombok.Data;
-
-@Data
+/**
+ * @author wermar
+ */
 public class Content {
 
     private String word;
