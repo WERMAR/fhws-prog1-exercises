@@ -8,15 +8,15 @@ public class Querprodukt {
         var scanner = new Scanner(System.in);
         boolean numberIsValid = false;
         int userInput = -1;
-        do {
+        while (!numberIsValid) {
             System.out.print("Geben Sie bitte eine Zahl ein: ");
             int input = scanner.nextInt();
             if (input < 0 || input >= 1000000)
-                System.err.println("Eingabe ist ungültig - Zahl muss positiv sein");
+                System.out.println("Eingabe ist ungültig - Zahl muss positiv sein");
             numberIsValid = !(input < 0 || input >= 1000000);
             if (numberIsValid)
                 userInput = input;
-        } while (!numberIsValid);
+        }
 
         var userInputAsChar = String.valueOf(userInput).toCharArray();
         var sum = 1;
