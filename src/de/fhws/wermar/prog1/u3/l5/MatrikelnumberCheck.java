@@ -11,8 +11,15 @@ public class MatrikelnumberCheck {
         var inputUser = scanner.next();
         scanner.close();
 
-        if (inputUser.length() == 0) {
-            System.out.println("No Matrikelnumber available for check - Task finished");
+        if (inputUser.length() != 7) {
+            System.err.println("No valid Matrikelnumber available for check - Task finished");
+        } else {
+            String beginOfMatrikelNum = inputUser.substring(0, 2);
+            if (beginOfMatrikelNum.equals("50") || beginOfMatrikelNum.equals("51") || beginOfMatrikelNum.equals("61")) {
+                System.out.println("Matrikelnummer is valid");
+            } else {
+                System.out.println("Matrikelnummer is not valid");
+            }
         }
     }
 }
