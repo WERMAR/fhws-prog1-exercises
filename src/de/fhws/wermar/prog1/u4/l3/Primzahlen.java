@@ -28,6 +28,6 @@ public class Primzahlen {
                 }
             }
         }
-
+        scanner.close();
     }
 }
