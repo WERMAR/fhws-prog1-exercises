@@ -13,6 +13,7 @@ public class PowCalcRecursive {
         var isNegativeExpo = expo < 0;
         double x = calcPow(1, base, (isNegativeExpo ? (expo * -1) : expo));
         System.out.println("Ergebnis: " + (isNegativeExpo ? (1 / x) : x));
+        scanner.close();
     }
 
     public static double calcPow(double sum, double base, int exp) {

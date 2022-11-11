@@ -20,7 +20,7 @@ public class PowCalc {
         }
     }
 
-    private static double calculatePositive(double base, int expo) {
+    public static double calculatePositive(double base, int expo) {
         var multiplicationSummary = 1;
         for (int i = 1; i <= expo; i++) {
             multiplicationSummary *= base;
