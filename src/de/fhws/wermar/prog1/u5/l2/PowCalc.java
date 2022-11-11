@@ -12,9 +12,9 @@ public class PowCalc {
         var expo = scanner.nextInt();
 
         if (expo == 0) {
-            System.out.println("Ergebnis: " + base);
+            System.out.println("Ergebnis: " + 1);
         } else if (expo < 0) {
-            System.out.println("Ergebnis: " + calculateNNegative(base, expo));
+            System.out.println("Ergebnis: " + calculateNegative(base, expo));
         } else {
             System.out.println("Ergebnis: " + calculatePositive(base, expo));
         }
@@ -28,7 +28,7 @@ public class PowCalc {
         return multiplicationSummary;
     }
 
-    private static double calculateNNegative(double base, int expo) {
+    private static double calculateNegative(double base, int expo) {
         var multiplicationSummary = 1;
         for (int i = 1; i <= (expo * -1); i++) {
             multiplicationSummary *= base;
