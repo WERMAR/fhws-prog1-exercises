@@ -6,15 +6,25 @@ public class Faculty {
 
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
-        System.out.print("Welche Fakultät soll berechnet werden? - ");
-        int userInput = scanner.nextInt();
-        System.out.println("Faculty: " + calcFaculty(userInput, userInput));
+        System.out.print("Welche Fakultät soll berechnet werden? ");
+        long userInput = scanner.nextInt();
+        boolean userInputNegative = userInput < 0;
+        long faculty = calcFaculty(userInputNegative ? (-1 * userInput) : userInput);
+        System.out.println("Faculty: " + (userInputNegative ? (-1 * faculty) : faculty));
     }
 
-    public static int calcFaculty(int sum, int prevNumber) {
+    public static long calcFacultyRef(long sum, long prevNumber) {
         var newNumber = prevNumber - 1;
         if (newNumber == 0)
             return sum;
-        return calcFaculty((sum *= newNumber), newNumber);
+        return calcFacultyRef((sum * newNumber), newNumber);
+    }
+
+    public static long calcFaculty(long num) {
+        long sum = 1;
+        for (long i = num; i > 0; i--) {
+            sum *= i;
+        }
+        return sum;
     }
 }
