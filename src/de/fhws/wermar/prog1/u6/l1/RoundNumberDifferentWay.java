@@ -6,12 +6,29 @@ public class RoundNumberDifferentWay {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Eingabe der Zahl: ");
+        /*System.out.print("Eingabe der Zahl: ");
         double eingabeBenutzerNummer = scanner.nextDouble();
         System.out.print("Anzahl Nachkommastellen: "); // ln -> \n -> zunächst einen Zeilenumbruch dann scanner.nextInt()
         int anzahlNachkommastellen = scanner.nextInt();
         System.out.println("Zahl ( " + eingabeBenutzerNummer + " ) ist gerundent: " + runden(eingabeBenutzerNummer, anzahlNachkommastellen));
         scanner.close();
+        */
+        scanner.close();
+        System.out.println("Gerundet: " + rundenA(5.2));
+        System.out.println("Gerundet: " + rundenA(5.4));
+        System.out.println("Gerundet: " + rundenA(5.6));
+        System.out.println("Gerundet: " + rundenA(5.6));
+    }
+
+    /**
+     * Method for Task a of L1 - returns a rounded number.
+     *
+     * @param number - which should be rounded
+     * @return rounded number based on the lower number without any floating-digits
+     */
+    public static int rundenA(double number) {
+        double neueZahl = number + 0.5;
+        return (int) neueZahl;
     }
 
     public static double runden(double benutzerZahl, int nachkommastellen) {
