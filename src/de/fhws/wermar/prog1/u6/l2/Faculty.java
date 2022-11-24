@@ -13,11 +13,11 @@ public class Faculty {
         System.out.println("Faculty: " + (userInputNegative ? (-1 * faculty) : faculty));
     }
 
-    public static long calcFacultyRef(long sum, long prevNumber) {
+    public static long calcFacultyRecursive(long sum, long prevNumber) {
         var newNumber = prevNumber - 1;
         if (newNumber == 0)
             return sum;
-        return calcFacultyRef((sum * newNumber), newNumber);
+        return calcFacultyRecursive((sum * newNumber), newNumber);
     }
 
     public static long calcFaculty(long num) {

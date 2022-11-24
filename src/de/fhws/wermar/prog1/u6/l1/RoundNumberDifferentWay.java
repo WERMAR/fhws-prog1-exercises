@@ -24,6 +24,7 @@ public class RoundNumberDifferentWay {
      * Method for Task a of L1 - returns a rounded number.
      *
      * @param number - which should be rounded
+     *
      * @return rounded number based on the lower number without any floating-digits
      */
     public static int rundenA(double number) {

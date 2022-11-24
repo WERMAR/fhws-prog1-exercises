@@ -19,8 +19,8 @@ public class SinusCalc {
         double summary = 0.0;
         double tempSum = 1.0;
         for (int k = 0; tempSum > 1E-15 || tempSum < -1E-15; k++) {
-            var resultFirstPow = PowCalc.calculatePositive(-1, k);
-            var numerators = PowCalc.calculatePositive(x, 2 * k + 1);
+            var resultFirstPow = powPositive(-1, k);
+            var numerators = powPositive(x, 2 * k + 1);
             var denominator = calcFaculty((2 * k + 1));
             tempSum = resultFirstPow * (numerators / denominator);
             summary += tempSum;
@@ -36,5 +36,12 @@ public class SinusCalc {
         return summary;
     }
 
+    public static double powPositive(double base, double expo) {
+        var multiplicationSummary = 1;
+        for (int i = 1; i <= expo; i++) {
+            multiplicationSummary *= base;
+        }
+        return multiplicationSummary;
+    }
 
 }
